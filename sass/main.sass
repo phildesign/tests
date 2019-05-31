@@ -1,0 +1,105 @@
+@import "vars"
+@import "fonts"
+
+*
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+\:after, :before
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+::placeholder
+	color: #777
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #777 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.d-flex
+	display: flex
+
+.wrapper
+
+.header
+	display: flex
+	align-items: center
+	background: $header-bg
+	height: 125px
+	&__container
+		padding-left: 107px
+		padding-right: 160px
+		align-items: center
+		height: 100%
+	&__logo
+		padding-right: 125px
+		
+.nav
+	&__item
+		list-style-type: none
+	&__link
+		color: #fff
+		text-decoration: none
+		padding-right: 50px 
+		font-size: 24px
+
+.contacts
+	&__link
+		font-size: 32px
+		color: #fff
+		text-decoration: none
+	&__text
+		display: block
+		color: #fff
+		font-size: 20px
+
+.content
+	background: $content-bg
+	height: 100vh
+	&__container
+		width: $content
+		height: 100%
+		margin: 0 auto
+	&__title
+		font-size: 32px
+		font-family: 'OpenSansBold'
+		padding: 35px 0px 35px 110px
+	&__apartments
+		background: #fff
+		height: 100vh
+		padding: 35px 110px
+		
+
+
+@import "media" // Always at the end
