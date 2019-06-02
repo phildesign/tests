@@ -1,5 +1,8 @@
 const apartments = [
     {
+        sale: '',
+        offer: '',
+        star: 'img/star_1.png',
         name: 'Студия №44',
         look: 'без отделки',
         square: 28,
@@ -11,6 +14,9 @@ const apartments = [
         status: 'Забронировано'
     },
     {
+        sale: '',
+        offer: '',
+        star: 'img/star_2.png',
         name: 'Однокомнатная №666',
         look: 'базовая отделка',
         square: 66,
@@ -22,6 +28,9 @@ const apartments = [
         status: 'Свободно'
     },
     {
+        sale: '',
+        offer: '',
+        star: 'img/star_1.png',
         name: 'Двухкомнатная №567',
         look: 'черновая отделка',
         square: 65.6,
@@ -33,6 +42,9 @@ const apartments = [
         status: 'Продано'
     },
     {
+        sale: '',
+        offer: '',
+        star: 'img/star_2.png',
         name: 'Трехкомнатная №45',
         look: 'без отделки',
         square: 56,
@@ -44,6 +56,9 @@ const apartments = [
         status: 'Забронировано'
     },
     {
+        sale: '-17%',
+        offer: 'Шок цена',
+        star: 'img/star_1.png',
         name: 'Студия  №25',
         look: 'черновая отделка',
         square: 18,
@@ -55,6 +70,9 @@ const apartments = [
         status: 'Забронировано'
     },
     {
+        sale: '-6%',
+        offer: '',
+        star: 'img/star_2.png',
         name: 'Четырехкомнатная №259',
         look: 'черновая отделка',
         square: 98,
@@ -66,6 +84,9 @@ const apartments = [
         status: 'Забронировано'
     },
     {
+        sale: '',
+        offer: '',
+        star: 'img/star_2.png',
         name: 'Однокомнатная №56',
         look: 'без отделки',
         square: 36,
@@ -77,6 +98,9 @@ const apartments = [
         status: 'Свободно'
     },
     {
+        sale: '',
+        offer: '',
+        star: 'img/star_2.png',
         name: 'Трехкомнтаная №46',
         look: 'черновая отделка',
         square: 86,
@@ -88,6 +112,9 @@ const apartments = [
         status: 'Свободно'
     },
     {
+        sale: '-9%',
+        offer: 'Шок цена',
+        star: 'img/star_2.png',
         name: 'Однокомнатная №2',
         look: 'черновая отделка',
         square: 18,
@@ -99,6 +126,9 @@ const apartments = [
         status: 'Забронировано'
     },
     {
+        sale: '-6%',
+        offer: '',
+        star: 'img/star_2.png',
         name: 'Студия №12',
         look: 'черновая отделка',
         square: 38,
@@ -110,6 +140,9 @@ const apartments = [
         status: 'Забронировано'
     },
     {
+        sale: '-6%',
+        offer: '',
+        star: 'img/star_2.png',
         name: 'Однокомнатная №8',
         look: 'черновая отделка',
         square: 48,
@@ -121,6 +154,9 @@ const apartments = [
         status: 'Забронировано'
     },
     {
+        sale: '-6%',
+        offer: '',
+        star: 'img/star_2.png',
         name: 'Двухкомнатная №23',
         look: 'базовая отделка',
         square: 48,

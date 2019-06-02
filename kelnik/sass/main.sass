@@ -176,17 +176,21 @@ b, strong
 	width: 320px
 	margin-bottom: 50px
 	&__inner
-		padding: 20px
+		padding: 15px
+		height: 490px
 	&__img
 		justify-content: center
+		align-items: center
+		height: 200px
 	&__description
-		padding: 0 52px
+		padding: 0 38px
 	&__title
 		font-family: 'OpenSansBold'
 		font-size: 24px
-		margin: 50px 0
+		height: 60px
+		margin: 32px 0 25px 0
 	&__price
-		margin-top: 42px
+		margin-top: 15px
 		font-size: 24px
 		font-family: 'OpenSansSemiBold'
 	&__status
@@ -209,7 +213,7 @@ b, strong
 		background: $booked
 
 //sold
-.booked .apartment
+.sold .apartment
 	border: 1px solid $sold
 	&__status
 		border-top: 1px solid $sold
@@ -217,19 +221,19 @@ b, strong
 
 .top-line
 	align-items: center
-	margin-bottom: 22px
+	margin-bottom: 5px
 	&__sale
 		font-size: 12px
 		font-family: 'OpenSansSemiBold'
-		padding: 2px
+		padding: 0 5px
 		margin-right: 20px
 		background: $accent
 		color: #fff
 		border-radius: 5px
-	&__price
+	&__offer
 		font-size: 12px
 		font-family: 'OpenSansSemiBold'
-		padding: 2px
+		padding: 0 5px
 		background: $accent
 		color: #fff
 		border-radius: 5px
@@ -238,7 +242,6 @@ b, strong
 		margin-left: auto
 		width: 23px
 		height: 22px
-		background: url('/img/css_sprites.png') -10px -10px no-repeat
 
 .props
 	width: 30%
