@@ -41,16 +41,15 @@ body
 	&.img-width
 		width: 100%
 
-.text-center
-	text-align: center
-
 b, strong
 	font-weight: bold
 
 .d-flex
 	display: flex
 
-.wrapper
+.main
+	background: $main-bg
+	height: 100%
 
 .header
 	display: flex
@@ -85,8 +84,6 @@ b, strong
 		font-size: 20px
 
 .content
-	background: $content-bg
-	height: 100vh
 	&__container
 		width: $content
 		height: 100%
@@ -97,9 +94,223 @@ b, strong
 		padding: 35px 0px 35px 110px
 	&__apartments
 		background: #fff
-		height: 100vh
+		height: 100%
 		padding: 35px 110px
-		
 
+.filter
+	display: flex
+	font-size: 14px
+	&__title	
+	&__item
+		position: relative
+		align-items: center
+		margin-left: 12px
+		cursor: pointer
+		&:hover > .dropdown
+			opacity: 1
+			transform: translateY(0)
+			display: flex
+			flex-direction: column
+	&__button
+		position: relative
+		justify-content: center
+		align-items: center
+		width: 18px
+		height: 18px
+		background: #F5F8F8
+		border-radius: 50%
+		margin-left: 10px
+		&::before
+			content: ''
+			position: absolute
+			top: 8px
+			left: 7px
+			width: 4px
+			height: 4px
+			border-top: 1px solid #5998AA
+			border-right: 1px solid #5998AA
+			transform: rotate(-45deg)
+
+.filter__dropdown, .filter__item, .filter__button 
+    -webkit-transition-duration: .5s
+    transition-duration: .5s
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+
+.dropdown
+	position: absolute
+	display: flex
+	flex-direction: column
+	font-size: 12px
+	bottom: -50px
+	width: 110px
+	padding: 5px
+	left: -5px
+	transform: translateY(-10px)
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3)
+	opacity: 0
+	&__item
+		margin: 3px 0 0 0 
+
+.apartments
+	&__inner
+		margin-top: 50px
+		flex-wrap: wrap
+		justify-content: space-between
+	&__more-button
+		justify-content: center
+		align-items: center
+		background: $form-bg
+		width: 534px
+		height: 70px
+		margin: 0 auto 75px
+		color: #fff
+		font-size: 14px
+		font-family: 'OpenSansSemiBold'
+		text-transform: uppercase
+
+.apartment
+	flex-direction: column
+	border: 1px solid $free
+	border-radius: 3px
+	width: 320px
+	margin-bottom: 50px
+	&__inner
+		padding: 20px
+	&__img
+		justify-content: center
+	&__description
+		padding: 0 52px
+	&__title
+		font-family: 'OpenSansBold'
+		font-size: 24px
+		margin: 50px 0
+	&__price
+		margin-top: 42px
+		font-size: 24px
+		font-family: 'OpenSansSemiBold'
+	&__status
+		padding: 12px 0
+		border-top: 1px solid $free
+		font-size: 12px
+		font-family: 'OpenSansSemiBold'
+		text-align: center
+		text-transform: uppercase
+		color: #fff
+		background: $free
+
+//status color
+
+//booked
+.booked .apartment
+	border: 1px solid $booked
+	&__status
+		border-top: 1px solid $booked
+		background: $booked
+
+//sold
+.booked .apartment
+	border: 1px solid $sold
+	&__status
+		border-top: 1px solid $sold
+		background: $sold
+
+.top-line
+	align-items: center
+	margin-bottom: 22px
+	&__sale
+		font-size: 12px
+		font-family: 'OpenSansSemiBold'
+		padding: 2px
+		margin-right: 20px
+		background: $accent
+		color: #fff
+		border-radius: 5px
+	&__price
+		font-size: 12px
+		font-family: 'OpenSansSemiBold'
+		padding: 2px
+		background: $accent
+		color: #fff
+		border-radius: 5px
+		text-transform: uppercase
+	&__star
+		margin-left: auto
+		width: 23px
+		height: 22px
+		background: url('/img/css_sprites.png') -10px -10px no-repeat
+
+.props
+	width: 30%
+	&__look
+		margin-right: 20px
+		border-left: 3px solid #046380
+		padding-left: 8px
+		color: #046380
+		line-height: 1.5
+	&__square
+		margin-right: 10px
+	&__text
+		font-size: 13px
+		line-height: 1.5
+	&__text_sup
+		font-size: 10px
+
+.subscription
+	margin: 73px 0 102px 0
+	&__container
+		margin: 0 auto
+		padding: 60px 107px 50px 50px
+		width: 1280px
+		height: 198px
+		background: $form-bg
+	&__row
+		align-items: baseline
+	&__col-left
+		// margin-top: 0px
+	&__col-right
+		margin-left: auto
+	&__title
+		font-size: 34px
+		font-family: 'OpenSansSemiBold'
+		color: #fff
+	&__text
+		font-size: 18px
+		color: #fff
+
+.form
+	&__group
+		flex-direction: column
+		margin-right: 55px
+	&__item
+		color: #fff
+		font-size: 18px
+		font-family: $default-font
+		align-items: center
+	&__input
+		width: 320px
+		height: 50px
+		border-radius: 3px
+		margin-bottom: 10px
+		padding-left: 20px
+		font-size: 18px
+		font-family: $default-font
+	&__checkbox
+		width: 20px
+		height: 20px
+		margin-right: 10px
+	&__button
+		width: 212px
+		height: 50px
+		color: #fff
+		background: $booked
+		outline: none
+		border: none
+		border-radius: 3px
+		text-transform: uppercase
+		font-family: $default-font
+		font-size: 16px
+
+.input1
 
 @import "media" // Always at the end

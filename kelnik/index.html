@@ -22,6 +22,7 @@
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
+
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
@@ -52,32 +53,222 @@
 		</header>
 
 		<main class="main">
-			<div class="content">
+			<section class="content">
 				<div class="content__container">
-					<h1 class="content__title">Найдено <span id="apartmentsCount"></span> квартир</h1>
+					<h1 class="content__title">Найдено <span class="apartmentsCount"></span> квартир</h1>
 					<div class="content__apartments apartments">
 						<div class="apartments__filter filter">
 							<span class="filter__title">Сортировать по:</span>
-							<div class="filter__item">
-								Цене <div class="filter__button filter__button_price"></div>
+							<div class="filter__item d-flex">
+								Цене <div class="filter__button filter__button_price d-flex"></div>
 								<div class="filter__dropdown dropdown">
-									<span class="dropdown__min-price">По возрастанию</span>
-									<span class="dropdown__max-price">По убыванию</span>
+									<span class="dropdown__item dropdown__item_min-price">По возрастанию</span>
+									<span class="dropdown__item dropdown__item_max-price">По убыванию</span>
 								</div>
 							</div>
-							<div class="filter__item">
+							<div class="filter__item d-flex">
 								Комнатам <div class="filter__button filter__button_room"></div>
 								<div class="filter__dropdown dropdown">
-									<span class="dropdown__min-rooms">По возрастанию</span>
-									<span class="dropdown__max-rooms">По убыванию</span>
+									<span class="dropdown__item dropdown__item_min-rooms">По возрастанию</span>
+									<span class="dropdown__item dropdown__item_max-rooms">По убыванию</span>
 								</div>
 							</div>
 						</div>
-						<div class="apartments__inner"></div>
-						<div class="apartments__more-button">Показать еще 20</div>
+						<div class="apartments__inner d-flex">
+
+							<div class="apartments__item apartment d-flex">
+								<div class="apartment__inner">
+									<div class="apartment__top-line top-line d-flex">
+										<div class="top-line__sale">-17%</div>
+										<div class="top-line__price">Шок цена!</div>
+										<div class="top-line__star"></div>
+									</div>
+									<div class="apartment__img d-flex">
+										<img src="/img/apartments/1.png" alt="">
+									</div>
+									<div class="apartment__description">
+										<p class="apartment__title">Студия №44</p>
+										<div class="apartment__props props d-flex">
+											<div class="props__look">без отделки</div>
+											<div class="props__square">28 м<sup
+													class="props__text props__text_sup">2</sup>
+												<p class="props__text">площадь</p>
+											</div>
+											<div class="props__floor">12/14 <p class="props__text">этаж</p>
+											</div>
+										</div>
+										<div class="apartment__price">1 900 000 руб.</div>
+									</div>
+
+								</div>
+								<div class="apartment__status">Свободно</div>
+							</div>
+
+							<div class="apartments__item apartment d-flex">
+								<div class="apartment__inner">
+									<div class="apartment__top-line top-line d-flex">
+										<div class="top-line__sale">-17%</div>
+										<div class="top-line__price">Шок цена!</div>
+										<div class="top-line__star"></div>
+									</div>
+									<div class="apartment__img d-flex">
+										<img src="/img/apartments/1.png" alt="">
+									</div>
+									<div class="apartment__description">
+										<p class="apartment__title">Студия №44</p>
+										<div class="apartment__props props d-flex">
+											<div class="props__look">без отделки</div>
+											<div class="props__square">28 м<sup
+													class="props__text props__text_sup">2</sup>
+												<p class="props__text">площадь</p>
+											</div>
+											<div class="props__floor">12/14 <p class="props__text">этаж</p>
+											</div>
+										</div>
+										<div class="apartment__price">1 900 000 руб.</div>
+									</div>
+
+								</div>
+								<div class="apartment__status">Свободно</div>
+							</div>
+
+							<div class="apartments__item apartment d-flex">
+								<div class="apartment__inner">
+									<div class="apartment__top-line top-line d-flex">
+										<div class="top-line__sale">-17%</div>
+										<div class="top-line__price">Шок цена!</div>
+										<div class="top-line__star"></div>
+									</div>
+									<div class="apartment__img d-flex">
+										<img src="/img/apartments/1.png" alt="">
+									</div>
+									<div class="apartment__description">
+										<p class="apartment__title">Студия №44</p>
+										<div class="apartment__props props d-flex">
+											<div class="props__look">без отделки</div>
+											<div class="props__square">28 м<sup
+													class="props__text props__text_sup">2</sup>
+												<p class="props__text">площадь</p>
+											</div>
+											<div class="props__floor">12/14 <p class="props__text">этаж</p>
+											</div>
+										</div>
+										<div class="apartment__price">1 900 000 руб.</div>
+									</div>
+
+								</div>
+								<div class="apartment__status">Свободно</div>
+							</div>
+
+							<div class="apartments__item apartment d-flex">
+								<div class="apartment__inner">
+									<div class="apartment__top-line top-line d-flex">
+										<div class="top-line__sale">-17%</div>
+										<div class="top-line__price">Шок цена!</div>
+										<div class="top-line__star"></div>
+									</div>
+									<div class="apartment__img d-flex">
+										<img src="/img/apartments/1.png" alt="">
+									</div>
+									<div class="apartment__description">
+										<p class="apartment__title">Студия №44</p>
+										<div class="apartment__props props d-flex">
+											<div class="props__look">без отделки</div>
+											<div class="props__square">28 м<sup
+													class="props__text props__text_sup">2</sup>
+												<p class="props__text">площадь</p>
+											</div>
+											<div class="props__floor">12/14 <p class="props__text">этаж</p>
+											</div>
+										</div>
+										<div class="apartment__price">1 900 000 руб.</div>
+									</div>
+
+								</div>
+								<div class="apartment__status">Свободно</div>
+							</div>
+
+							<div class="apartments__item apartment d-flex">
+								<div class="apartment__inner">
+									<div class="apartment__top-line top-line d-flex">
+										<div class="top-line__sale">-17%</div>
+										<div class="top-line__price">Шок цена!</div>
+										<div class="top-line__star"></div>
+									</div>
+									<div class="apartment__img d-flex">
+										<img src="/img/apartments/1.png" alt="">
+									</div>
+									<div class="apartment__description">
+										<p class="apartment__title">Студия №44</p>
+										<div class="apartment__props props d-flex">
+											<div class="props__look">без отделки</div>
+											<div class="props__square">28 м<sup
+													class="props__text props__text_sup">2</sup>
+												<p class="props__text">площадь</p>
+											</div>
+											<div class="props__floor">12/14 <p class="props__text">этаж</p>
+											</div>
+										</div>
+										<div class="apartment__price">1 900 000 руб.</div>
+									</div>
+
+								</div>
+								<div class="apartment__status">Свободно</div>
+							</div>
+
+							<div class="apartments__item apartment d-flex">
+								<div class="apartment__inner">
+									<div class="apartment__top-line top-line d-flex">
+										<div class="top-line__sale">-17%</div>
+										<div class="top-line__price">Шок цена!</div>
+										<div class="top-line__star"></div>
+									</div>
+									<div class="apartment__img d-flex">
+										<img src="/img/apartments/1.png" alt="">
+									</div>
+									<div class="apartment__description">
+										<p class="apartment__title">Студия №44</p>
+										<div class="apartment__props props d-flex">
+											<div class="props__look">без отделки</div>
+											<div class="props__square">28 м<sup
+													class="props__text props__text_sup">2</sup>
+												<p class="props__text">площадь</p>
+											</div>
+											<div class="props__floor">12/14 <p class="props__text">этаж</p>
+											</div>
+										</div>
+										<div class="apartment__price">1 900 000 руб.</div>
+									</div>
+
+								</div>
+								<div class="apartment__status">Свободно</div>
+							</div>
+
+						</div>
+						<div class="apartments__more-button d-flex">Показать еще 20</div>
 					</div>
 				</div>
-			</div>
+			</section>
+
+			<section class="subscription">
+				<div class="subscription__container">
+					<div class="subscription__row d-flex">
+						<div class="subscription__col-left">
+							<h2 class="subscription__title">Успей купить!</h2>
+							<p class="subscription__text">Подпишись и успей словить все акции</p>
+						</div>
+						<div class="subscription__col-right">
+							<form action="" class="subscription__form form d-flex">
+								<div class="form__group d-flex">
+									<p class="form__item d-flex"><input type="text" class="form__input" placeholder="E-mail" required></p>
+									<p class="form__item d-flex"><input type="checkbox" class="form__checkbox" name="" value="" checked>подписаться на новости</p>
+								</div>
+								<button class="form__button" type="submit">Подписаться</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
 
 		</main>
 	</div>
