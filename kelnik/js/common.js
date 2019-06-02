@@ -4,8 +4,8 @@ outStr = '';
 list = document.querySelector('.apartments__inner');
 apartmentsOut();
 function apartmentsOut(counter = 0) {
-    for (let i = counter; i < counter + 21; i++) {
-        outStr +=`
+    for (let i = counter; i < apartments.length; i++) {
+        outStr += `
         <div class="apartments__item apartment d-flex ${apartments[i].mark}">
             <div class="apartment__inner">
                 <div class="apartment__top-line top-line d-flex">
@@ -36,4 +36,89 @@ function apartmentsOut(counter = 0) {
         list.innerHTML = outStr;
     }
     document.querySelector('.apartmentsCount').innerHTML = apartments.length;
+}
+
+
+let minPriceButton, maxPriceButton, minRoomButton, maxRoomButton;
+
+minPriceButton = document.querySelector('.dropdown__item_min-price').onclick = minPrice;
+function minPrice() {
+    document.querySelector('.filter__button_price').style.transform = 'rotate(0deg)';
+    outStr = '';
+    apartments.sort(sortMinPrice);
+    apartmentsOut();
+}
+function sortMinPrice(a, b) {
+    const priceOne = a.price;
+    const priceTwo = b.price;
+    let comparsion = 0;
+    if (priceOne > priceTwo) {
+        comparsion = 1;
+    } else if (priceOne < priceTwo) {
+        comparsion = -1;
+    }
+    return comparsion;
+}
+
+maxPriceButton = document.querySelector('.dropdown__item_max-price').onclick = maxPrice;
+function maxPrice() {
+    document.querySelector('.filter__button_price').style.transform = 'rotate(-180deg)';
+    outStr = '';
+    apartments.sort(sortMaxPrice);
+    apartmentsOut();
+}
+function sortMaxPrice(a, b) {
+    const priceOne = a.price;
+    const priceTwo = b.price;
+    let comparsion = 0;
+    if (priceOne < priceTwo) {
+        comparsion = 1;
+    } else if (priceOne > priceTwo) {
+        comparsion = -1;
+    }
+    return comparsion;
+}
+
+minRoomButton = document.querySelector('.dropdown__item_min-rooms').onclick = minRooms;
+function minRooms() {
+    document.querySelector('.filter__button_room').style.transform = 'rotate(0deg)';
+    outStr = '';
+    apartments.sort(sortMinRooms);
+    apartmentsOut();
+}
+function sortMinRooms(a, b) {
+    const roomOne = a.rooms;
+    const roomTwo = b.rooms;
+    let comparsion = 0;
+    if (roomOne > roomTwo) {
+        comparsion = 1;
+    } else if (roomOne < roomTwo) {
+        comparsion = -1;
+    }
+    return comparsion;
+}
+
+maxRoomButton = document.querySelector('.dropdown__item_max-rooms').onclick = maxRooms;
+function maxRooms() {
+    document.querySelector('.filter__button_room').style.transform = 'rotate(-180deg)';
+    outStr = '';
+    apartments.sort(sortMaxRooms);
+    apartmentsOut();
+}
+function sortMaxRooms(a, b) {
+    const roomOne = a.rooms;
+    const roomTwo = b.rooms;
+    let comparsion = 0;
+    if (roomOne < roomTwo) {
+        comparsion = 1;
+    } else if (roomOne > roomTwo) {
+        comparsion = -1;
+    }
+    return comparsion;
+}
+
+let apartmentsJSON = JSON.stringify(apartments); 
+document.querySelector('.apartments__more-button').onclick = showMore;
+function showMore() {
+
 }
