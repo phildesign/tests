@@ -66,11 +66,16 @@ b, strong
 .nav
 	&__item
 		list-style-type: none
+		transition: all .7s
+		&:hover
+			transform: scale(1.1)
+			transition: all .7s
 	&__link
 		color: #fff
 		text-decoration: none
 		padding-right: 50px 
 		font-size: 24px
+
 
 .contacts
 	margin-left: auto
@@ -162,6 +167,7 @@ b, strong
 		justify-content: center
 		align-items: center
 		background: $form-bg
+		cursor: pointer
 		width: 534px
 		height: 70px
 		margin: 0 auto 75px
@@ -169,6 +175,10 @@ b, strong
 		font-size: 14px
 		font-family: 'OpenSansSemiBold'
 		text-transform: uppercase
+		transition: all .7s
+		&:hover
+			background: darken($form-bg, 5%)
+			transition: all .7s
 
 .apartment
 	flex-direction: column
@@ -308,6 +318,7 @@ b, strong
 	&__button
 		width: 212px
 		height: 50px
+		cursor: pointer
 		color: #fff
 		background: $booked
 		outline: none
@@ -316,6 +327,10 @@ b, strong
 		text-transform: uppercase
 		font-family: $default-font
 		font-size: 16px
+		transition: all .7s
+		&:hover
+			background: darken($booked, 10%)
+			transition: all .7s
 
 .top-arrow
 	position: fixed
@@ -329,6 +344,7 @@ b, strong
 	border-radius: 50%
 	width: 80px
 	height: 80px
+	transition: all .7s
 	&::before
 			content: ''
 			position: absolute
@@ -340,5 +356,8 @@ b, strong
 			border-right: 5px solid #fff
 			border-radius: 5px
 			transform: rotate(-45deg)
+	&:hover
+		background: darken($booked, 15%)
+		transition: all .7s
 
 @import "media" // Always at the end
