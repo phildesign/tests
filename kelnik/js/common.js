@@ -118,6 +118,8 @@ function sortMaxRooms(a, b) {
 }
 
 let apartmentsJSON = JSON.stringify(apartments);
+testJ = JSON.parse(apartmentsJSON);
+console.log(testJ);
 document.querySelector('.apartments__more-button').onclick = showMore;
 function showMore() {
 

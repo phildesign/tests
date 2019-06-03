@@ -57,7 +57,7 @@ const apartments = [
     },
     {
         sale: '-17%',
-        offer: 'Шок цена',
+        offer: 'Шок цена!',
         star: 'img/star_1.png',
         name: 'Студия  №25',
         look: 'черновая отделка',
@@ -113,7 +113,7 @@ const apartments = [
     },
     {
         sale: '-9%',
-        offer: 'Шок цена',
+        offer: 'Шок цена!',
         star: 'img/star_2.png',
         name: 'Однокомнатная №2',
         look: 'черновая отделка',
