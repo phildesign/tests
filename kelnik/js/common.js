@@ -1,43 +1,51 @@
-let outStr = apartments.map(item => item), list;
+var requestURL = 'js/apartments.json'
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+
+request.onload = function () {
+    var apartments = request.response;
+    apartmentsOut(apartments);
+}
 
 outStr = '';
-list = document.querySelector('.apartments__inner');
-apartmentsOut();
-function apartmentsOut(counter = 0) {
-    for (let i = counter; i < apartments.length; i++) {
+var list = document.querySelector('.apartments__inner');
+function apartmentsOut(jsonObj) {
+    console.log()
+    for (let i = 0; i < jsonObj.length; i++) {
         outStr += `
-        <div class="apartments__item apartment d-flex ${apartments[i].mark}">
+        <div class="apartments__item apartment d-flex ${jsonObj[i].mark}">
             <div class="apartment__inner">
                 <div class="apartment__top-line top-line d-flex">
-                    <div class="top-line__sale">${apartments[i].sale}</div>
-                    <div class="top-line__offer">${apartments[i].offer}</div>
-                    <div class="top-line__star"><img src="${apartments[i].star}"  alt=""></div>
+                    <div class="top-line__sale">${jsonObj[i].sale}</div>
+                    <div class="top-line__offer">${jsonObj[i].offer}</div>
+                    <div class="top-line__star"><img src="${jsonObj[i].star}"  alt=""></div>
                 </div>
                 <div class="apartment__img d-flex">
-                    <img src="${apartments[i].img}" alt="">
+                    <img src="${jsonObj[i].img}" alt="">
                 </div>
                 <div class="apartment__description">
-                    <p class="apartment__title">${apartments[i].name}</p>
+                    <p class="apartment__title">${jsonObj[i].name}</p>
                     <div class="apartment__props props d-flex">
-                        <div class="props__look">${apartments[i].look}</div>
-                        <div class="props__square"><span>${apartments[i].square}</span> м<sup
+                        <div class="props__look">${jsonObj[i].look}</div>
+                        <div class="props__square"><span>${jsonObj[i].square}</span> м<sup
                                 class="props__text props__text_sup">2</sup>
                             <p class="props__text">площадь</p>
                         </div>
-                        <div class="props__floor"><span>${apartments[i].floor}</span> <p class="props__text">этаж</p>
+                        <div class="props__floor"><span>${jsonObj[i].floor}</span> <p class="props__text">этаж</p>
                         </div>
                     </div>
-                    <div class="apartment__price"><span>${(apartments[i].price).toLocaleString('ru')}</span> руб.</div>
+                    <div class="apartment__price"><span>${(jsonObj[i].price).toLocaleString('ru')}</span> руб.</div>
                 </div>
             </div>
-            <div class="apartment__status">${apartments[i].status}</div>
+            <div class="apartment__status">${jsonObj[i].status}</div>
         </div>
         `
         list.innerHTML = outStr;
     }
-    document.querySelector('.apartmentsCount').innerHTML = apartments.length;
+    document.querySelector('.apartmentsCount').innerHTML = jsonObj.length;
 }
-
 
 let minPriceButton, maxPriceButton, minRoomButton, maxRoomButton;
 
@@ -117,14 +125,6 @@ function sortMaxRooms(a, b) {
     return comparsion;
 }
 
-let apartmentsJSON = JSON.stringify(apartments);
-testJ = JSON.parse(apartmentsJSON);
-console.log(testJ);
-document.querySelector('.apartments__more-button').onclick = showMore;
-function showMore() {
-
-}
-
 //arrow
 let smoothJumpUp = function () {
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
@@ -132,7 +132,6 @@ let smoothJumpUp = function () {
         setTimeout(smoothJumpUp, 15);
     }
 }
-
 window.onscroll = function () {
     let scrolled = window.pageYOffset || document.documentElement.scrollTop;
     if (scrolled > 100) {
@@ -141,3 +140,26 @@ window.onscroll = function () {
         document.querySelector('.top-arrow').style.display = 'none';
     }
 }
+
+// validation e-mail
+// function validate(form_id, email) {
+//     let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+//     let address = document.forms[form_id].elements[email].value;
+//     if (reg.test(address) == false) {
+//         let alertMessage = document.createElement('p');
+//         let alertMessageOut = document.querySelector('.form__group');
+//         alertMessage.className = 'alert';
+//         alertMessage.innerHTML = 'Пожалуйста введите корректный e-mail';
+//         alertMessageOut.insertBefore(alertMessage, alertMessageOut.children[1]);
+//         return false;
+//     }
+// }
+
+
+
+// document.querySelector('.apartments__more-button').onclick = showMore;
+// function showMore() {
+
+// }
+
+
