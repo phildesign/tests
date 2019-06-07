@@ -360,8 +360,25 @@ b, strong
 		background: darken($booked, 15%)
 		transition: all .7s
 
-.alert
-	display: inline-block
-	background: $accent
+
+input:invalid 
+	border-color: #900
+	background-color: #FDD
+
+input:focus:invalid 
+	outline: none
+
+.error
+	text-align: center
+	width: 100%
+	padding: 0
+	font-size: 80%
+	color: white
+	background-color: #900
+	border-radius: 0 0 5px 5px
+
+.error.active 
+	padding: 0.3em
+
 
 @import "media" // Always at the end

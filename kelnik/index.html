@@ -75,6 +75,7 @@
 							</div>
 						</div>
 						<div class="apartments__inner d-flex"></div>
+
 						<a class="apartments__more-button d-flex">Показать еще 20</a>
 					</div>
 				</div>
@@ -88,11 +89,11 @@
 							<p class="subscription__text">Подпишись и успей словить все акции</p>
 						</div>
 						<div class="subscription__col-right">
-							<form action="" id="form_id" class="subscription__form form d-flex"
-								onsubmit="javascript:return validate('form_id','email');">
+							<form class="subscription__form form d-flex" novalidate>
 								<div class="form__group d-flex">
-									<p class="form__item d-flex"><input type="text" id="email" class="form__input"
-											placeholder="E-mail" required></p>
+									<p class="form__item d-flex"><input type="email" class="form__input form__e-mail"
+											placeholder="E-mail"></p>
+									<span class="error" aria-live="polite"></span>
 									<p class="form__item d-flex"><input type="checkbox" class="form__checkbox" name=""
 											value="" checked>подписаться на новости</p>
 								</div>
@@ -108,10 +109,6 @@
 		</main>
 	</div>
 
-	<div class="result"></div>
-
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="js/scripts.min.js"></script>
 
 </body>
